@@ -1,114 +1,124 @@
-Iris Flower Classification using k-Nearest Neighbors (k-NN)
-By: Glory Bagai
-One-line Description: A supervised learning project that predicts the species of iris flowers based on their physical measurements using the k-Nearest Neighbors algorithm.
+🌸 Iris Species Classification using K-Nearest Neighbors
+By:
+Glory Bagai
 
-About
-This project focuses on building a machine learning model to classify iris flowers into one of three species—setosa, versicolor, or virginica—based on their sepal and petal measurements. The dataset used is the famous Iris dataset, which contains labeled examples of flower measurements. We implemented the k-Nearest Neighbors (k-NN) classification algorithm to train and evaluate the model, achieving an accuracy of 97% on the test set.
+📘 About
+This project is a machine learning classification task that predicts the species of an iris flower based on its physical measurements. By using the classic Iris dataset, we built a supervised learning model with the K-Nearest Neighbors (KNN) algorithm to classify the flower as either Setosa, Versicolor, or Virginica. The simplicity and interpretability of KNN made it an ideal choice for this beginner-friendly classification problem.
 
-Time Spent
-Data Loading & Exploration: 1 hour
+⏱ Time Spent
+Total: Approximately 4–6 hours
 
-Model Training & Evaluation: 2 hours
+Data exploration & preprocessing: 1.5 hours
 
-Documentation & Fine-tuning: 1 hour
+Model building & training: 1 hour
 
-Required Features and Optional Features
-Required Features (Input Variables)
-Sepal length (cm)
+Evaluation & accuracy testing: 1 hour
 
-Sepal width (cm)
+Documentation, polishing, and debugging: 1.5–2 hours
 
-Petal length (cm)
+🧰 Required Features
+Use of Scikit-learn’s KNeighborsClassifier
 
-Petal width (cm)
+Supervised learning approach
 
-Optional Features (Hyperparameters for k-NN)
-Number of neighbors (n_neighbors) – Default: 5
+Use of fit() and score() methods
 
-Distance metric (metric) – Default: Euclidean distance
+3-class classification for Setosa, Versicolor, and Virginica
 
-Weight function (weights) – Uniform or distance-based
+Evaluation of accuracy on test set
 
-Notes
-The dataset is well-balanced, with 50 samples per class.
+Use of train-test split (80%-20%)
 
-No missing values or outliers were present, so minimal preprocessing was needed.
+💡 Optional Features (Implemented)
+Accuracy computation (~97%)
 
-The model performs exceptionally well with default hyperparameters.
+Inline plotting for data exploration (e.g., matplotlib, seaborn)
 
-Link to Relevant Documentation
-Scikit-learn KNeighborsClassifier Documentation
+Commented code cells in Colab
 
-Iris Dataset Description
+Code modularization into functions
 
-Licenses
-Dataset: Public Domain (UCI Machine Learning Repository)
+📝 Notes
+Dataset used: Iris Dataset from Scikit-learn's built-in datasets.
 
-Code: MIT License
+The task is supervised learning, as the training data includes labeled examples.
 
-Inspiration
-Inspired by the classic machine learning problem introduced in Pattern Recognition and Machine Learning by Christopher Bishop.
+It is a multi-class classification problem (3 classes).
 
-Scikit-learn Tutorial on k-NN
+Our model was able to achieve an accuracy of approximately 97% on unseen test data.
 
-What It Does
-This project:
+🔗 Link to Relevant Documentation
+Scikit-learn - KNeighborsClassifier
 
-Loads the Iris dataset (sepal and petal measurements).
+Iris Dataset Info (Wikipedia)
 
-Splits the data into training and test sets.
+Google Colab Documentation
 
-Trains a k-Nearest Neighbors classifier to predict iris species.
+🪪 Licenses
+This project uses:
 
-Evaluates model performance using accuracy metrics.
+MIT License – Open for use, modification, and distribution.
+View License
 
-How We Built It
-Data Loading & Preprocessing
+🌟 Inspiration
+This project was inspired by the classic Iris flower classification task made famous by Ronald Fisher in 1936.
+🔗 Original Iris Dataset Overview
 
-Used sklearn.datasets.load_iris() to load the dataset.
+⚙️ What It Does
+Predicts the species of an iris flower using physical measurements including:
 
-Split the data into X_train, X_test, y_train, y_test using train_test_split().
+Sepal length
 
-Model Training
+Sepal width
 
-Initialized KNeighborsClassifier with n_neighbors=5.
+Petal length
 
-Fitted the model using model.fit(X_train, y_train).
+Petal width
+
+It applies the K-Nearest Neighbors algorithm to analyze training data and classify a new sample based on the most common label among its nearest neighbors.
+
+🛠 How We Built It
+Data Loading
+Used Scikit-learn’s load_iris() function.
+
+Data Preprocessing
+Split the dataset into training and testing sets using train_test_split().
+
+Model Building
+Instantiated KNeighborsClassifier with default parameters and trained using the fit() method.
 
 Evaluation
+Evaluated the model with the score() method and achieved ~97% accuracy.
 
-Predicted test set labels using model.predict(X_test).
+Visualization (Optional)
+Explored data patterns with Seaborn and Matplotlib plots.
 
-Computed accuracy with model.score(X_test, y_test).
+🧗 Challenges We Ran Into
+Choosing the right value of k (number of neighbors) for optimal performance.
 
-Challenges We Ran Into
-Choosing the right k value: Too small led to overfitting, too large led to underfitting.
+Understanding how different features affect classification.
 
-Feature scaling: Initially, features were not scaled, but since k-NN is distance-based, scaling improved performance.
+Ensuring the model generalizes well without overfitting.
 
-Interpretability: Understanding why certain neighbors were chosen required visualizing decision boundaries.
+🏆 Accomplishments We’re Proud Of
+Successfully implemented a model with 97% accuracy.
 
-Accomplishments We’re Proud Of
-Achieved 97% accuracy with minimal tuning.
+Gained hands-on experience in end-to-end machine learning workflow.
 
-Successfully implemented a fundamental ML algorithm from scratch.
+Understood the intuition and working of KNN classification.
 
-Created a reproducible Colab notebook for easy experimentation.
+📚 What We Learned
+How to load and explore a standard dataset in Scikit-learn.
 
-What We Learned
-The importance of distance metrics in k-NN.
+The fundamentals of supervised learning and classification tasks.
 
-How hyperparameter tuning affects model performance.
+The workings of K-Nearest Neighbors and how predictions are made.
 
-The trade-off between model complexity and generalization.
+Evaluation of ML models using test data.
 
-What’s Next
-Experiment with other classification algorithms (e.g., SVM, Decision Trees).
+🚀 What’s Next
+Experiment with other classification algorithms like SVM, Decision Trees, or Random Forests.
 
-Apply cross-validation for more robust model evaluation.
+Tune KNN parameters like number of neighbors (k) and distance metrics.
 
-Deploy the model as a simple web app using Flask or Streamlit.
-
-Try It Out!
-🔗 Open in Google Colab (Add your Colab link here)# Flower-Specie-Classification
-A supervised learning project that predicts the species of iris flowers based on their physical measurements using the k-Nearest Neighbors algorithm.
+Build a simple web app to classify iris species in real-time using Streamlit or Flask.
